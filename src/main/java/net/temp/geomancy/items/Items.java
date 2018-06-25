@@ -6,18 +6,21 @@ import net.minecraftforge.registries.IForgeRegistry;
 
 public class Items {
 
+	
 	//Item declarations
-	public static ItemBase template = new ItemBase("template").setCreativeTab(CreativeTabs.MATERIALS);
+	public static ItemBase itemTemplate = new ItemBase("item_template").setCreativeTab(CreativeTabs.MATERIALS);
+	
+	
 	//Item registrations
 	public static void register(IForgeRegistry<Item> registry) {
 		registry.registerAll(
-				template
+				itemTemplate
 				);
 	}
 	
 	//Model registrations
 	public static void registerModels() {
-		template.registerItemModel();
+		itemTemplate.registerItemModel();
 	}
 
 }

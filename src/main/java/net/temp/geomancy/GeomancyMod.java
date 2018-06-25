@@ -1,5 +1,6 @@
 package net.temp.geomancy;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.temp.geomancy.blocks.Blocks;
 import net.temp.geomancy.items.Items;
 import net.temp.geomancy.proxy.CommonProxy;
 
@@ -31,10 +33,17 @@ public class GeomancyMod {
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
 			Items.register(event.getRegistry());
+			Blocks.registerItemBlocks(event.getRegistry());
 		}
 		@SubscribeEvent
 		public static void registerItems(ModelRegistryEvent event) {
 			Items.registerModels();
+			Blocks.registerModels();
+		}
+		
+		@SubscribeEvent
+		public static void registerBlocks(RegistryEvent.Register<Block> event) {
+			Blocks.register(event.getRegistry());
 		}
 
 	}
