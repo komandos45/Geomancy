@@ -8,7 +8,7 @@ public class Items {
 
 	
 	//Item declarations
-	public static ItemBase itemTemplate = new ItemBase("item_template").setCreativeTab(CreativeTabs.MATERIALS);
+	public static ItemBase itemTemplate = new ItemBase("item_template");
 	
 	
 	//Item registrations

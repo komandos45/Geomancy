@@ -9,7 +9,7 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class Blocks {
 
 	//Block declaration
-	public static BlockOre blockTemplate = new BlockOre("block_template").setCreativeTab(CreativeTabs.MATERIALS);
+	public static BlockOre blockTemplate = new BlockOre("block_template");
 	
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(

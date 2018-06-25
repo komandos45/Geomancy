@@ -12,6 +12,7 @@ public class ItemBase extends Item {
 		this.name = name;
 		setUnlocalizedName(name);
 		setRegistryName(name);
+		setCreativeTab(GeomancyMod.itemCreativeTab);
 	}
 	
 	public void registerItemModel() {

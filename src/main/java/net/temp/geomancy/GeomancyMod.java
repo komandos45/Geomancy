@@ -11,6 +11,8 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.temp.geomancy.blocks.Blocks;
+import net.temp.geomancy.creative.BlockTab;
+import net.temp.geomancy.creative.ItemTab;
 import net.temp.geomancy.items.Items;
 import net.temp.geomancy.proxy.CommonProxy;
 
@@ -47,6 +49,11 @@ public class GeomancyMod {
 		}
 
 	}
+	
+	public static final ItemTab itemCreativeTab = new ItemTab();
+	public static final BlockTab blockCreativeTab = new BlockTab();
+	
+	
 	
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {

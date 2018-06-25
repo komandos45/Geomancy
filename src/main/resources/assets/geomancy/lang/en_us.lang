@@ -1,0 +1,7 @@
+#Items
+item.item_template.name=Item Template
+#Blocks
+tile.block_template.name=Block Template
+#Creative Tabs
+itemGroup.geomancy=Geomancy Items
+itemGroup.geomancy1=Geomancy Blocks

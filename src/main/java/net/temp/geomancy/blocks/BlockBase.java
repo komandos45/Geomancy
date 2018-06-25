@@ -16,7 +16,7 @@ public class BlockBase extends Block {
 		super(material);
 	
 		this.name = name;
-	
+		setCreativeTab(GeomancyMod.blockCreativeTab);
 		setUnlocalizedName(name);
 		setRegistryName(name);
 	}
