@@ -3,7 +3,7 @@ package net.temp.geomancy.creative;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.temp.geomancy.GeomancyMod;
-import net.temp.geomancy.items.Items;
+import net.temp.geomancy.items.ModItems;
 
 public class ItemTab extends CreativeTabs {
 
@@ -13,7 +13,7 @@ public class ItemTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(Items.blackGem);
+		return new ItemStack(ModItems.blackGem);
 	}
 
 }

@@ -6,7 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
 
-public class Blocks {
+public class ModBlocks {
 
 	//Block declaration
 	public static BlockOre geoStone = new BlockOre("geo_stone");

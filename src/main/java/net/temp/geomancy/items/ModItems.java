@@ -4,7 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraftforge.registries.IForgeRegistry;
 
-public class Items {
+public class ModItems {
 
 	
 	//Item declarations

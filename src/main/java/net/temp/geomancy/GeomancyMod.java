@@ -10,10 +10,10 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.temp.geomancy.blocks.Blocks;
+import net.temp.geomancy.blocks.ModBlocks;
 import net.temp.geomancy.creative.BlockTab;
 import net.temp.geomancy.creative.ItemTab;
-import net.temp.geomancy.items.Items;
+import net.temp.geomancy.items.ModItems;
 import net.temp.geomancy.proxy.CommonProxy;
 
 
@@ -34,18 +34,18 @@ public class GeomancyMod {
 	public static class RegistrationHandler {
 		@SubscribeEvent
 		public static void registerItems(RegistryEvent.Register<Item> event) {
-			Items.register(event.getRegistry());
-			Blocks.registerItemBlocks(event.getRegistry());
+			ModItems.register(event.getRegistry());
+			ModBlocks.registerItemBlocks(event.getRegistry());
 		}
 		@SubscribeEvent
 		public static void registerItems(ModelRegistryEvent event) {
-			Items.registerModels();
-			Blocks.registerModels();
+			ModItems.registerModels();
+			ModBlocks.registerModels();
 		}
 		
 		@SubscribeEvent
 		public static void registerBlocks(RegistryEvent.Register<Block> event) {
-			Blocks.register(event.getRegistry());
+			ModBlocks.register(event.getRegistry());
 		}
 
 	}
