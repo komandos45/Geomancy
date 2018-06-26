@@ -13,7 +13,7 @@ public class BlockTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(Blocks.blockTemplate);
+		return new ItemStack(Blocks.GeoStone);
 	}
 
 }
