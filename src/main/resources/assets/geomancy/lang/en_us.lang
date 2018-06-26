@@ -6,7 +6,7 @@ item.prism_stone.name=Prism Stone
 item.red_gem.name=Red Gem
 item.yellow_gem.name=Yellow Gem
 #Blocks
-tile.block_template.name=Block Template
+tile.geo_stone.name=Geo Stone
 #Creative Tabs
 itemGroup.geomancy=Geomancy Items
 itemGroup.geomancy1=Geomancy Blocks

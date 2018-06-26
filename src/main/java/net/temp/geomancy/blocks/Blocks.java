@@ -9,23 +9,23 @@ import net.minecraftforge.registries.IForgeRegistry;
 public class Blocks {
 
 	//Block declaration
-	public static BlockOre GeoStone = new BlockOre("Geo_Stone");
+	public static BlockOre geoStone = new BlockOre("geo_stone");
 	
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(
-				GeoStone
+				geoStone
 		);
 	}
 
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
 		registry.registerAll(
-				GeoStone.createItemBlock()
+				geoStone.createItemBlock()
 		); 
 
 	}
 
 	public static void registerModels() {
-		GeoStone.registerItemModel(Item.getItemFromBlock(GeoStone));
+		geoStone.registerItemModel(Item.getItemFromBlock(geoStone));
 
 	}
 
