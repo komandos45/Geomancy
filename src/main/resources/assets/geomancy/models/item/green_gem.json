@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "geomancy:item/item_template"
+		"layer0": "geomancy:item/Green_Gem"
 	}
 }

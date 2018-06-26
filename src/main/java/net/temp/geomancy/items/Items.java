@@ -8,19 +8,34 @@ public class Items {
 
 	
 	//Item declarations
-	public static ItemBase itemTemplate = new ItemBase("item_template");
+	public static ItemBase blackGem = new ItemBase("black_gem");
+	public static ItemBase blueGem = new ItemBase("blue_gem");
+	public static ItemBase greenGem = new ItemBase("green_gem");
+	public static ItemBase prismStone = new ItemBase("prism_stone");
+	public static ItemBase redGem = new ItemBase("red_gem");
+	public static ItemBase yellowGem = new ItemBase("yellow_gem");
 	
 	
 	//Item registrations
 	public static void register(IForgeRegistry<Item> registry) {
 		registry.registerAll(
-				itemTemplate
+				blackGem,
+				blueGem,
+				greenGem,
+				prismStone,
+				redGem,
+				yellowGem
 				);
 	}
 	
 	//Model registrations
 	public static void registerModels() {
-		itemTemplate.registerItemModel();
+		blackGem.registerItemModel();
+		blueGem.registerItemModel();
+		greenGem.registerItemModel();
+		prismStone.registerItemModel();
+		redGem.registerItemModel();
+		yellowGem.registerItemModel();
 	}
 
 }

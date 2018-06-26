@@ -13,7 +13,7 @@ public class ItemTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(Items.itemTemplate);
+		return new ItemStack(Items.blackGem);
 	}
 
 }

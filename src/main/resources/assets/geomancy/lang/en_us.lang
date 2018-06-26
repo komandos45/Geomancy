@@ -1,5 +1,10 @@
 #Items
-item.item_template.name=Item Template
+item.black_gem.name=Black Gem
+item.blue_gem.name=Blue Gem
+item.green_gem.name=Green Gem
+item.prism_stone.name=Prism Stone
+item.red_gem.name=Red Gem
+item.yellow_gem.name=Yellow Gem
 #Blocks
 tile.block_template.name=Block Template
 #Creative Tabs
