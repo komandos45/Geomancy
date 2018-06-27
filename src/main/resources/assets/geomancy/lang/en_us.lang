@@ -8,6 +8,11 @@ item.yellow_gem.name=Yellow Gem
 #Blocks
 tile.geo_stone.name=Geo Stone
 tile.crystal.name=Crystal Cluster
+tile.ore_blue_gem.name=Blue Gem Ore
+tile.ore_black_gem.name=Black Gem Ore
+tile.ore_red_gem.name=Red Gem Ore
+tile.ore_green_gem.name=Green Gem Ore
+tile.ore_yellow_gem.name=Yellow Gem Ore
 #Creative Tabs
 itemGroup.geomancy=Geomancy Items
 itemGroup.geomancy1=Geomancy Blocks

@@ -12,6 +12,7 @@ public class BlockOre extends BlockBase {
 		setResistance(5f);
 	}
 	
+	
 	@Override
 	public BlockOre setCreativeTab(CreativeTabs tab) {
 		super.setCreativeTab(tab);
