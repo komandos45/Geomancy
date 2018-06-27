@@ -10,10 +10,11 @@ public class ModBlocks {
 
 	//Block declaration
 	public static BlockOre geoStone = new BlockOre("geo_stone");
-	
+	public static BlockCrystal crystal = new BlockCrystal();
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(
 				geoStone
+			
 		);
 	}
 

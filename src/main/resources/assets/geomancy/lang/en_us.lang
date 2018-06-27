@@ -7,6 +7,7 @@ item.red_gem.name=Red Gem
 item.yellow_gem.name=Yellow Gem
 #Blocks
 tile.geo_stone.name=Geo Stone
+title.crystal.name=Crystal Cluster
 #Creative Tabs
 itemGroup.geomancy=Geomancy Items
 itemGroup.geomancy1=Geomancy Blocks

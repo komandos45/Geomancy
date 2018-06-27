@@ -1,0 +1,12 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "normal": {
+            "model": "geomancy:block/crystal"
+        },
+        "inventory": {
+            "model": "geomancy:block/crystal",
+            "transform": "forge:default-block"
+        }
+    }
+}
