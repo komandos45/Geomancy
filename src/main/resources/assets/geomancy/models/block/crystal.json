@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "blocks/geo_stone",
-		"3": "blocks/texture"
+		"3": "blocks/geo_furnace_on"
 	},
 	"elements": [
 		{

@@ -13,21 +13,22 @@ public class ModBlocks {
 	public static BlockCrystal crystal = new BlockCrystal();
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(
-				geoStone
-			
+				geoStone,crystal
+				
 		);
 	}
 
 	public static void registerItemBlocks(IForgeRegistry<Item> registry) {
 		registry.registerAll(
-				geoStone.createItemBlock()
+				geoStone.createItemBlock(),
+				crystal.createItemBlock()
 		); 
 
 	}
 
 	public static void registerModels() {
 		geoStone.registerItemModel(Item.getItemFromBlock(geoStone));
-
+		crystal.registerItemModel(Item.getItemFromBlock(crystal));
 	}
 
 }
