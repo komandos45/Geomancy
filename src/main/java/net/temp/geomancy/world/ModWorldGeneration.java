@@ -30,8 +30,12 @@ public class ModWorldGeneration implements IWorldGenerator {
 	
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-	generateOre(ModBlocks.geoStone.getDefaultState(), world, BlockMatcher.forBlock(Blocks.STONE) , random, chunkX * 16, chunkZ * 16, 16, 64, 30 + random.nextInt(4), 3);
-	generateOre(ModBlocks.oreBlueGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.oreBlackGem) , random, chunkX * 16, chunkZ * 16, 16, 64, 5 + random.nextInt(4), 3);
+	generateOre(ModBlocks.geoStone.getDefaultState(), world, BlockMatcher.forBlock(Blocks.STONE) , random, chunkX * 16, chunkZ * 16, 6, 100, 128, 5);
+	generateOre(ModBlocks.oreBlueGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.geoStone) , random, chunkX * 16, chunkZ * 16, 6, 100, 4 + random.nextInt(4), 1);
+	generateOre(ModBlocks.oreBlackGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.geoStone) , random, chunkX * 16, chunkZ * 16, 6, 100, 4 + random.nextInt(4), 1);
+	generateOre(ModBlocks.oreRedGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.geoStone) , random, chunkX * 16, chunkZ * 16, 6, 100, 4 + random.nextInt(4), 1);
+	generateOre(ModBlocks.oreYellowGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.geoStone) , random, chunkX * 16, chunkZ * 16, 6, 100, 4 + random.nextInt(4), 1);
+	generateOre(ModBlocks.oreGreenGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.geoStone) , random, chunkX * 16, chunkZ * 16, 6, 100, 4 + random.nextInt(4), 1);
 
 	
 	
