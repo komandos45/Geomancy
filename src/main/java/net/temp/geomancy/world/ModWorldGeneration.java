@@ -1,6 +1,10 @@
 package net.temp.geomancy.world;
 
+import net.minecraft.block.Block;
+import net.temp.geomancy.blocks.*;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.state.pattern.BlockMatcher;
+import net.minecraft.init.Blocks;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.IChunkGenerator;
@@ -10,6 +14,8 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import net.temp.geomancy.blocks.ModBlocks;
 
 import java.util.Random;
+
+import akka.japi.Predicate;
 
 public class ModWorldGeneration implements IWorldGenerator {
 	
@@ -24,10 +30,17 @@ public class ModWorldGeneration implements IWorldGenerator {
 	
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-	generateOre(ModBlocks.geoStone.getDefaultState(), world, random, chunkX * 16, chunkZ * 16, 16, 64, 30 + random.nextInt(4), 3);
+	generateOre(ModBlocks.geoStone.getDefaultState(), world, BlockMatcher.forBlock(Blocks.STONE) , random, chunkX * 16, chunkZ * 16, 16, 64, 30 + random.nextInt(4), 3);
+	generateOre(ModBlocks.oreBlueGem.getDefaultState(), world, BlockMatcher.forBlock(net.temp.geomancy.blocks.ModBlocks.oreBlackGem) , random, chunkX * 16, chunkZ * 16, 16, 64, 5 + random.nextInt(4), 3);
+
+	
+	
+	
+	
+	
 	}
 	
-	private void generateOre(IBlockState ore, World world, Random random, int x, int z, int minY, int maxY, int size, int chances) {
+	private void generateOre(IBlockState ore, World world, BlockMatcher blockMatcher, Random random, int x, int z, int minY, int maxY, int size, int chances) {
 		int deltaY = maxY - minY;
 	
 		for (int i = 0; i < chances; i++) {
