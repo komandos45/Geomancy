@@ -10,11 +10,13 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.temp.geomancy.blocks.ModBlocks;
 import net.temp.geomancy.creative.BlockTab;
 import net.temp.geomancy.creative.ItemTab;
 import net.temp.geomancy.items.ModItems;
 import net.temp.geomancy.proxy.CommonProxy;
+import net.temp.geomancy.world.ModWorldGeneration;
 
 
 @Mod(modid = GeomancyMod.modId, name = GeomancyMod.name, version = GeomancyMod.version, acceptedMinecraftVersions = "[1.12.2]")
@@ -58,6 +60,8 @@ public class GeomancyMod {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println(name + " is loading!");
+		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
+	
 	}
 
 	@Mod.EventHandler
