@@ -19,6 +19,8 @@ public class BlockBase extends Block {
 		setCreativeTab(GeomancyMod.blockCreativeTab);
 		setUnlocalizedName(name);
 		setRegistryName(name);
+		setHardness(3f);
+		setResistance(5f);
 	}
 	
 	public void registerItemModel(Item itemBlock) {
