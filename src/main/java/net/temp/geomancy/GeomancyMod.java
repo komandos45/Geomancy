@@ -16,7 +16,8 @@ import net.temp.geomancy.creative.BlockTab;
 import net.temp.geomancy.creative.ItemTab;
 import net.temp.geomancy.items.ModItems;
 import net.temp.geomancy.proxy.CommonProxy;
-import net.temp.geomancy.world.ModWorldGeneration;
+import net.temp.geomancy.world.ModWorldOreGeneration;
+import net.temp.geomancy.world.ModWorldStoneGeneration;
 
 
 @Mod(modid = GeomancyMod.modId, name = GeomancyMod.name, version = GeomancyMod.version, acceptedMinecraftVersions = "[1.12.2]")
@@ -60,7 +61,8 @@ public class GeomancyMod {
 	@Mod.EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println(name + " is loading!");
-		GameRegistry.registerWorldGenerator(new ModWorldGeneration(), 3);
+		GameRegistry.registerWorldGenerator(new ModWorldStoneGeneration(), 3);
+		GameRegistry.registerWorldGenerator(new ModWorldOreGeneration(), 4);
 	
 	}
 
