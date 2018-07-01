@@ -42,7 +42,7 @@ public class ModWorldStoneGeneration implements IWorldGenerator {
 	
 	
 	private void generateOverworld(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-	generateOre(ModBlocks.geoStone.getDefaultState(), world, BlockMatcher.forBlock(Blocks.STONE) , random, chunkX * 16, chunkZ * 16, 12, 60, 40 + random.nextInt(30), 2);	
+	generateOre(ModBlocks.geoStone.getDefaultState(), world, BlockMatcher.forBlock(Blocks.STONE) , random, chunkX * 16, chunkZ * 16, 20, 60, 40 + random.nextInt(30), 1);	
 	
 	}
 	
@@ -56,19 +56,17 @@ public class ModWorldStoneGeneration implements IWorldGenerator {
 		d=(int) (2*Math.ceil(Math.pow(oreCount, 1/3)));
 		for (int i=0;i<d;i++){
 			w = (int) Math.ceil(d*0.5*Math.cos(i/d*Math.PI));
-			for (int j=0;j<2*w;j++){
-				for (int k=0;k<2*w;k++) {
-					if (d/2<Math.pow(Math.pow((j-w),2)+Math.pow((k-w),2),0.5)){
-						pos = new BlockPos(basePos.getX()+i,basePos.getY()+j-w,basePos.getZ()+k-w);
-						if(world.getBlockState(pos).getBlock()==ModBlocks.geoStone || world.getBlockState(pos).getBlock()==Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.STONE){
-							world.setBlockState(pos, crystal);
-							generated++;
-							//logger.debug("x: "+pos.getX()+" ,y: "+pos.getY()+" ,z: "+pos.getZ());
-							if (generated==oreCount){
-								return;
-							}
-							
-						}
+			logger.debug(w);
+			for (int j=0;j<=(2*w);j++){
+				for (int k=0;k<=(2*w);k++) {
+					pos = new BlockPos(basePos.getX()+i,basePos.getY()+j-w,basePos.getZ()+k-w);
+					if(world.getBlockState(pos).getBlock()==ModBlocks.geoStone || world.getBlockState(pos).getBlock()==Blocks.AIR || world.getBlockState(pos).getBlock() == Blocks.STONE){
+						world.setBlockState(pos, crystal);
+						generated++;
+						//logger.debug("x: "+pos.getX()+" ,y: "+pos.getY()+" ,z: "+pos.getZ());
+						if (generated==oreCount){
+							return;
+						}	
 					}
 				}
 			}
@@ -90,20 +88,25 @@ public class ModWorldStoneGeneration implements IWorldGenerator {
 			 */
 			
 			generator.generate(world, random, pos);
-			/*
+			
 			switch (random.nextInt(5)){
 				case 0:
 					generateCrystal(pos, ModBlocks.oreBlackGem.getDefaultState(), world, 10, 3, random);
+					break;
 				case 1:
 					generateCrystal(pos, ModBlocks.oreBlueGem.getDefaultState(), world, 10, 3, random);
+					break;
 				case 2:
 					generateCrystal(pos, ModBlocks.oreYellowGem.getDefaultState(), world, 10, 3, random);
+					break;
 				case 3:
 					generateCrystal(pos, ModBlocks.oreRedGem.getDefaultState(), world, 10, 3, random);
+					break;
 				case 4:
 					generateCrystal(pos, ModBlocks.oreGreenGem.getDefaultState(), world, 10, 3, random);
+					break;
 			}
-			*/
+			
 			
 		}
 	}
