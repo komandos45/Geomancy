@@ -63,17 +63,21 @@ public class GeomancyMod {
 		System.out.println(name + " is loading!");
 		GameRegistry.registerWorldGenerator(new ModWorldStoneGeneration(), 3);
 		GameRegistry.registerWorldGenerator(new ModWorldOreGeneration(), 4);
-	
+		
+		
+		//REGISTRY preInit
 	}
 
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		
+		//REGISTRY Init
 	}
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 
+		//REGISTRY postInit
 	}
 
 }
