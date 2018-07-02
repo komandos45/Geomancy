@@ -2,7 +2,11 @@ package net.temp.geomancy.proxy;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.temp.geomancy.items.ItemBase;
+import net.temp.geomancy.mana.GeoMana;
+import net.temp.geomancy.mana.GeoManaStorage;
+import net.temp.geomancy.mana.IGeoMana;
 
 
 public abstract class CommonProxy {
@@ -10,7 +14,7 @@ public abstract class CommonProxy {
 
   public void preInit()
   {
-	  
+	  CapabilityManager.INSTANCE.register(IGeoMana.class, new GeoManaStorage(), GeoMana.class);
   }
 
 
