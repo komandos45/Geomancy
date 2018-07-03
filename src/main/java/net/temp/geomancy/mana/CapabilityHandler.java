@@ -1,10 +1,14 @@
 package net.temp.geomancy.mana;
 
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
+import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.temp.geomancy.GeomancyMod;
+import net.temp.geomancy.mana.EventHandler;
+import net.minecraftforge.event.entity.EntityEvent;
 
 public class CapabilityHandler {
 
@@ -13,7 +17,8 @@ public class CapabilityHandler {
 	@SubscribeEvent
 	public void attachCapability(AttachCapabilitiesEvent.Entity event)
 	{
-	if (!(event.getEntity() instanceof EntityPlayer)) return;
+        if (!(event.getEntity() instanceof EntityPlayer)) return;
 
-	event.addCapability(MANA_CAP, new GeoManaProvider()); 
+        event.addCapability(MANA_CAP, new GeoManaProvider());
+    }
 }

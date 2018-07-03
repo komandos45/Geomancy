@@ -18,18 +18,18 @@ public abstract class CommonProxy {
 
   public void preInit()
   {
-	  
+	  CapabilityManager.INSTANCE.register(IGeoMana.class, new GeoManaStorage(), GeoMana.class);
+
+      MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
+      MinecraftForge.EVENT_BUS.register(new EventHandler(null, null, null, null));
+  
   }
 
 
   public void init()
   {
 	
-      CapabilityManager.INSTANCE.register(IGeoMana.class, new GeoManaStorage(), GeoMana.class);
-
-      MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
-      MinecraftForge.EVENT_BUS.register(new EventHandler(null, null, null, null));
-
+      
   }
 
   public void postInit()
