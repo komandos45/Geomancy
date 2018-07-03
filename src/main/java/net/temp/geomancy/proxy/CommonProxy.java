@@ -1,13 +1,12 @@
 package net.temp.geomancy.proxy;
 
-import java.beans.EventHandler;
-
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.temp.geomancy.items.ItemBase;
 import net.temp.geomancy.mana.CapabilityHandler;
+import net.temp.geomancy.mana.GeoEventHandler;
 import net.temp.geomancy.mana.GeoMana;
 import net.temp.geomancy.mana.GeoManaStorage;
 import net.temp.geomancy.mana.IGeoMana;
@@ -21,7 +20,7 @@ public abstract class CommonProxy {
 	  CapabilityManager.INSTANCE.register(IGeoMana.class, new GeoManaStorage(), GeoMana.class);
 
       MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
-      MinecraftForge.EVENT_BUS.register(new EventHandler(null, null, null, null));
+      MinecraftForge.EVENT_BUS.register(new GeoEventHandler());
   
   }
 

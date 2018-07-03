@@ -3,6 +3,8 @@ package net.temp.geomancy;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.capabilities.CapabilityManager;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -15,6 +17,11 @@ import net.temp.geomancy.blocks.ModBlocks;
 import net.temp.geomancy.creative.BlockTab;
 import net.temp.geomancy.creative.ItemTab;
 import net.temp.geomancy.items.ModItems;
+import net.temp.geomancy.mana.CapabilityHandler;
+import net.temp.geomancy.mana.GeoEventHandler;
+import net.temp.geomancy.mana.GeoMana;
+import net.temp.geomancy.mana.GeoManaStorage;
+import net.temp.geomancy.mana.IGeoMana;
 import net.temp.geomancy.proxy.CommonProxy;
 import net.temp.geomancy.world.ModWorldOreGeneration;
 import net.temp.geomancy.world.ModWorldStoneGeneration;
@@ -74,6 +81,10 @@ public class GeomancyMod {
 	@Mod.EventHandler
 	public void init(FMLInitializationEvent event) {
 		
+		CapabilityManager.INSTANCE.register(IGeoMana.class, new GeoManaStorage(), GeoMana.class);
+
+	    MinecraftForge.EVENT_BUS.register(new CapabilityHandler());
+		MinecraftForge.EVENT_BUS.register(new GeoEventHandler());
 		//REGISTRY Init
 	}
 

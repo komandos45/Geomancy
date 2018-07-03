@@ -11,7 +11,7 @@ import net.minecraftforge.event.entity.player.PlayerSleepInBedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent;
 
-public class EventHandler
+public class GeoEventHandler
 {
     @SubscribeEvent
     public void onPlayerLogsIn(PlayerLoggedInEvent event)
