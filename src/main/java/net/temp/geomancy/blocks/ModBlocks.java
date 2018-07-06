@@ -6,6 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.temp.geomancy.counter.BlockCounter;
 import net.temp.geomancy.items.ModItems;
 
 public class ModBlocks {
@@ -18,10 +19,11 @@ public class ModBlocks {
 	public static BlockOre oreYellowGem = new BlockOre("ore_yellow_gem", ModItems.yellowGem, 2, 3);
 	public static BlockOre oreRedGem = new BlockOre("ore_red_gem", ModItems.redGem, 2, 3);
 	public static BlockOre oreGreenGem = new BlockOre("ore_green_gem", ModItems.greenGem, 2, 3);
+	public static BlockCounter counter = new BlockCounter();
 	public static void register(IForgeRegistry<Block> registry) {
 		registry.registerAll(
 				geoStone,crystal,oreBlueGem,oreGreenGem,oreYellowGem,oreRedGem,oreBlackGem
-				
+				,counter
 		);
 	}
 
@@ -33,7 +35,8 @@ public class ModBlocks {
 				oreBlackGem.createItemBlock(),
 				oreRedGem.createItemBlock(),
 				oreYellowGem.createItemBlock(),
-				oreGreenGem.createItemBlock()
+				oreGreenGem.createItemBlock(),
+				counter.createItemBlock()
 		); 
 
 	}
@@ -46,6 +49,7 @@ public class ModBlocks {
 		oreBlackGem.registerItemModel(Item.getItemFromBlock(oreBlackGem));
 		oreYellowGem.registerItemModel(Item.getItemFromBlock(oreYellowGem));
 		oreGreenGem.registerItemModel(Item.getItemFromBlock(oreGreenGem));
+		counter.registerItemModel(Item.getItemFromBlock(counter));
 	}
 
 }
